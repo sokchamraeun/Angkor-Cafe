@@ -1,0 +1,173 @@
+{
+    "product" : [
+        {
+            "id": 1,
+            "name": "Iced Latte",
+            "category": "Coffee",
+            "price": "$4.50",
+            "image": "/images/iced-latte.jpg",
+            "description": "Espresso with cold milk and ice",
+            "customizations": {
+                "size": ["Small", "Medium", "Large"],
+                "sugar": ["0%", "25%", "50%", "75%", "100%"],
+                "ice": ["Less", "Normal", "Extra"]
+            }
+        },
+        {
+            "id": 2,
+            "name": "Iced Cappuccino",
+            "category": "Coffee",
+            "price": "$5.00",
+            "image": "/images/iced-cappuccino.jpg",
+            "description": "Espresso with cold milk and ice",
+            "customizations": {
+                "size": ["Small", "Medium", "Large"],
+                "sugar": ["0%", "25%", "50%", "75%", "100%"],
+                "ice": ["Less", "Normal", "Extra"]
+            }
+        },
+        {
+            "id": 3,
+            "name": "Iced Americano",
+            "category": "Coffee",
+            "price": "$3.50",
+            "image": "/images/iced-americano.jpg",
+            "description": "Espresso with cold water and ice",
+            "customizations": {
+                "size": ["Small", "Medium", "Large"],
+                "sugar": ["0%", "25%", "50%", "75%", "100%"],
+                "ice": ["Less", "Normal", "Extra"]
+            }
+        },
+        {
+            "id": 4,
+            "name": "Iced Mocha",
+            "category": "Coffee",
+            "price": "$5.50",
+            "image": "/images/iced-mocha.jpg",
+            "description": "Espresso with cold milk, chocolate, and ice",
+            "customizations": {
+                "size": ["Small", "Medium", "Large"],
+                "sugar": ["0%", "25%", "50%", "75%", "100%"],
+                "ice": ["Less", "Normal", "Extra"]
+            }
+        },
+        {
+            "id": 5,
+            "name": "Iced Caramel Latte",
+            "category": "Coffee",
+            "price": "$5.50",
+            "image": "/images/iced-caramel-latte.jpg",
+            "description": "Espresso with cold milk, caramel, and ice",
+            "customizations": {
+                "size": ["Small", "Medium", "Large"],
+                "sugar": ["0%", "25%", "50%", "75%", "100%"],
+                "ice": ["Less", "Normal", "Extra"]
+            }
+        },
+        {
+            "id": 6,
+            "name": "Iced Vanilla Latte",
+            "category": "Coffee",
+            "price": "$5.50",
+            "image": "/images/iced-vanilla-latte.jpg",
+            "description": "Espresso with cold milk, vanilla, and ice",
+            "customizations": {
+                "size": ["Small", "Medium", "Large"],
+                "sugar": ["0%", "25%", "50%", "75%", "100%"],
+                "ice": ["Less", "Normal", "Extra"]
+            }
+        },
+        {
+            "id": 7,
+            "name": "Iced Matcha Latte",
+            "category": "Tea",
+            "price": "$5.00",
+            "image": "/images/iced-matcha-latte.jpg",
+            "description": "Matcha powder with cold milk and ice",
+            "customizations": {
+                "size": ["Small", "Medium", "Large"],
+                "sugar": ["0%", "25%", "50%", "75%", "100%"],
+                "ice": ["Less", "Normal", "Extra"]
+            }
+        },
+        {
+            "id": 8,
+            "name": "Iced Chai Latte",
+            "category": "Tea",
+            "price": "$5.00",
+            "image": "/images/iced-chai-latte.jpg",
+            "description": "Chai concentrate with cold milk and ice",
+            "customizations": {
+                "size": ["Small", "Medium", "Large"],
+                "sugar": ["0%", "25%", "50%", "75%", "100%"],
+                "ice": ["Less", "Normal", "Extra"]
+            }
+        },
+        {
+            "id": 9,
+            "name": "Iced Black Tea",
+            "category": "Tea",
+            "price": "$3.00",
+            "image": "/images/iced-black-tea.jpg",
+            "description": "Black tea with ice",
+            "customizations": {
+                "size": ["Small", "Medium", "Large"],
+                "sugar": ["0%", "25%", "50%", "75%", "100%"],
+                "ice": ["Less", "Normal", "Extra"]
+            }
+        },
+        {
+            "id": 10,
+            "name": "Iced Green Tea",
+            "category": "Tea",
+            "price": "$3.00",
+            "image": "/images/iced-green-tea.jpg",
+            "description": "Green tea with ice",
+            "customizations": {
+                "size": ["Small", "Medium", "Large"],
+                "sugar": ["0%", "25%", "50%", "75%", "100%"],
+                "ice": ["Less", "Normal", "Extra"]
+            }
+        },
+        {
+            "id": 11,
+            "name": "Iced Fruit Tea",
+            "category": "Tea",
+            "price": "$4.00",
+            "image": "/images/iced-fruit-tea.jpg",
+            "description": "Fruit-infused tea with ice",
+            "customizations": {
+                "size": ["Small", "Medium", "Large"],
+                "sugar": ["0%", "25%", "50%", "75%", "100%"],
+                "ice": ["Less", "Normal", "Extra"]
+            }
+        },
+        {
+            "id": 12,
+            "name": "Iced Lemon Tea",
+            "category": "Tea",
+            "price": "$3.50",
+            "image": "/images/iced-lemon-tea.jpg",
+            "description": "Lemon-infused tea with ice",
+            "customizations": {
+                "size": ["Small", "Medium", "Large"],
+                "sugar": ["0%", "25%", "50%", "75%", "100%"],
+                "ice": ["Less", "Normal", "Extra"]
+            }
+        },
+        {
+            "id": 13,
+            "name": "Hot Latte",
+            "category": "Coffee",
+            "price": "$4.50",
+            "image": "/images/hot-latte.jpg",
+            "description": "Espresso with steamed milk",
+            "customizations": {
+                "size": ["Small", "Medium", "Large"],
+                "sugar": ["0%", "25%", "50%", "75%", "100%"],
+                "milk": ["Whole", "Skim", "Oat", "Almond"]
+            }
+        } 
+    ]
+}

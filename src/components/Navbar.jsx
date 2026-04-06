@@ -1,13 +1,22 @@
 import React from 'react';
+import { useAuth } from '../hooks/useAuth';
 
 const Navbar = ({ onOpenCart, cartCount, onSearch, searchQuery }) => {
     const [isSearchOpen, setIsSearchOpen] = React.useState(false);
+    const { user, logout } = useAuth();
     
+    // Mock login for demonstration until a full login page is implemented
+    const handleLoginClick = () => {
+        // If there's a login page, we would navigate to it. 
+        // For now, let's assume clicking login shows the profile page or we can provide a small helper.
+        window.location.hash = 'profile';
+    };
+
     const navItems = [
         { label: 'Home', path: '#home' },
         { label: 'Menu', path: '#menu' },
         { label: 'Cart', path: '#cart', badge: cartCount, isCart: true },
-        { label: 'Profile', path: '#profile' }
+        { label: user ? 'Profile' : 'Login', path: '#profile' }
     ];
 
     return (
@@ -104,14 +113,39 @@ const Navbar = ({ onOpenCart, cartCount, onSearch, searchQuery }) => {
                             )}
                         </div>
 
-                        <div className="flex items-center gap-2 md:gap-3 p-1.5 md:pr-4 rounded-full bg-white/5 hover:bg-white/10 transition-all duration-300 cursor-pointer border border-white/5 active:scale-95">
-                            <img 
-                                src="https://ui-avatars.com/api/?name=Admin&background=d4af37&color=fff" 
-                                alt="Profile" 
-                                className="w-7 h-7 md:w-8 md:h-8 rounded-full border-2 border-[#d4af37]" 
-                            />
-                            <span className="hidden sm:inline text-white text-sm font-medium font-['Outfit']">Manager</span>
-                        </div>
+                        {user ? (
+                            <div className="flex items-center gap-2 md:gap-3 p-1.5 md:pr-4 rounded-full bg-white/5 hover:bg-white/10 transition-all duration-300 cursor-pointer border border-white/5 active:scale-95 relative group/profile">
+                                <img 
+                                    src={user.avatar || `https://ui-avatars.com/api/?name=${user.name}&background=d4af37&color=fff`} 
+                                    alt="Profile" 
+                                    className="w-7 h-7 md:w-8 md:h-8 rounded-full border-2 border-[#d4af37]" 
+                                />
+                                <span className="hidden sm:inline text-white text-sm font-medium font-['Outfit']">{user.name}</span>
+                                
+                                {/* Simple Logout Dropdown */}
+                                <div className="absolute top-full right-0 mt-2 w-48 py-2 bg-[#1e1814] border border-[#d4af37]/20 rounded-xl shadow-2xl opacity-0 translate-y-2 pointer-events-none group-hover/profile:opacity-100 group-hover/profile:translate-y-0 group-hover/profile:pointer-events-auto transition-all duration-300 z-[110]">
+                                    <div className="px-4 py-2 border-b border-white/5 mb-2">
+                                        <p className="text-[10px] text-white/40 uppercase tracking-widest font-bold">Logged in as</p>
+                                        <p className="text-sm font-medium text-white truncate">{user.email || user.name}</p>
+                                    </div>
+                                    <button 
+                                        onClick={logout}
+                                        className="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-red-400 hover:bg-red-500/10 transition-colors text-left"
+                                    >
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+                                        Logout
+                                    </button>
+                                </div>
+                            </div>
+                        ) : (
+                            <button 
+                                onClick={handleLoginClick}
+                                className="flex items-center gap-2 px-4 md:px-6 py-2 rounded-xl bg-[#d4af37] text-[#1e1814] text-xs md:text-sm font-bold font-['Outfit'] hover:bg-white transition-all duration-300 active:scale-95 shadow-[0_0_20px_rgba(212,175,55,0.2)]"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"></path><polyline points="10 17 15 12 10 7"></polyline><line x1="15" y1="12" x2="3" y2="12"></line></svg>
+                                LOGIN
+                            </button>
+                        )}
                     </div>
 
                 </div>
